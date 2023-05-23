@@ -21,7 +21,7 @@ def say(text):
 
 def takeCommand():
     r = sr.Recognizer()
-    with sr.Microphone(device_index=2) as source:
+    with sr.Microphone() as source:
         audio = r.listen(source)
         try:
             Query = r.recognize_google(audio, language="en-in")
